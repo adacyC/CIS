@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Flynn's Rad Copyright.
 
 #include "CIS.h"
 #include "Modules/ModuleManager.h"
