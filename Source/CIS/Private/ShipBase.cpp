@@ -6,8 +6,10 @@ AShipBase::AShipBase()
 {
 	PrimaryActorTick.bCanEverTick = true;
     
-    CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
-    RootComponent = CollisionBox;
+    CollisionBoxPrimary = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBoxPrimary"));
+    RootComponent = CollisionBoxPrimary;
+    CollisionBoxSecondary = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBoxSecondary"));
+    CollisionBoxSecondary->SetupAttachment(RootComponent);
     ShipMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
     ShipMesh->SetupAttachment(RootComponent);
 }

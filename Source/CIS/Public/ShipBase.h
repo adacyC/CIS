@@ -23,7 +23,10 @@ protected:
 	virtual void BeginPlay() override;
     
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ship Setup")
-    UBoxComponent* CollisionBox = nullptr;
+    UBoxComponent* CollisionBoxPrimary = nullptr;
+    
+    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ship Setup")
+    UBoxComponent* CollisionBoxSecondary = nullptr;
     
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ship Setup")
     UStaticMeshComponent* ShipMesh = nullptr;
