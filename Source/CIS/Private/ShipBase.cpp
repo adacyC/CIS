@@ -48,7 +48,8 @@ void AShipBase::SetHorizontalSpeed(float AxisValue)
 
 void AShipBase::UpdateShipHorizontalLocation()
 {
-    FVector ShipLocation = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
+    //FVector ShipLocation = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
+    FVector ShipLocation = GetActorLocation();
     
     FVector HorizontalLocationModifier {HorizontalSpeed, 0.f, 0.f};
     FVector NewHorizontalLocation = ShipLocation + HorizontalLocationModifier;
@@ -57,7 +58,8 @@ void AShipBase::UpdateShipHorizontalLocation()
 
 void AShipBase::UpdateShipVerticalLocation()
 {
-    FVector ShipLocation = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
+    //FVector ShipLocation = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
+    FVector ShipLocation = GetActorLocation();
     
     FVector VerticalLocationModifier {0.f, 0.f, VerticalSpeed};
     FVector NewVerticalLocation = ShipLocation + VerticalLocationModifier;
