@@ -10,7 +10,8 @@ const static FName SESSION_NAME = TEXT("My Session Name");
 void UCIS_GameInstance::Init()
 {
     IOnlineSubsystem* Subsystem = IOnlineSubsystem::Get();
-    if (Subsystem != nullptr) {
+    if (Subsystem != nullptr)
+        {
         UE_LOG(LogTemp, Warning, TEXT("Found subsystem %s"), *Subsystem->GetSubsystemName().ToString());
         SessionInterface = Subsystem->GetSessionInterface();
         if(SessionInterface.IsValid())
